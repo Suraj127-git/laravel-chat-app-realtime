@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Broadcast;
 |
 */
 
-Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
-    return (int) $user->id === (int) $id;
+Broadcast::channel('chat.{receiverId}', function ($user, $receiverId) {
+    // Verify if the current user is allowed to receive messages
+    return $user->id === (int) $receiverId;
 });
