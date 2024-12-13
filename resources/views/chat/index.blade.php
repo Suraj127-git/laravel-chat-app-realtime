@@ -64,7 +64,7 @@
             cluster: '{{ env('PUSHER_APP_CLUSTER') }}'
         });
         console.log(`Pusher initialized with key: {{ env('PUSHER_APP_KEY') }} and cluster: {{ env('PUSHER_APP_CLUSTER') }}`);
-        console.log(pusher);
+
         let channel;
 
         // Handle user selection
@@ -99,7 +99,7 @@
         function displayMessage(message) {
             const messageDiv = document.createElement('div');
             messageDiv.classList.add('message');
-            messageDiv.innerHTML = `
+            messageDiv.innerHTML = ` 
                 <span class="sender">${message.sender_id}</span>: 
                 <span class="content">${message.content}</span>
             `;

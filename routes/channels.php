@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Broadcast;
 */
 
 Broadcast::channel('chat.{receiverId}', function ($user, $receiverId) {
-    // Verify if the current user is allowed to receive messages
-    return $user->id === (int) $receiverId;
+    // Ensure the user is either the sender or the receiver of the message
+    return (int) $user->id === (int) $receiverId;
 });
+

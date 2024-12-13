@@ -1,0 +1,6 @@
+projectKey=chatapp
+serverUrl=http://localhost:9000
+serverVersion=24.12.0.100206
+dashboardUrl=http://localhost:9000/dashboard?id=chatapp
+ceTaskId=8517f5fb-6745-4301-a4b1-a58fe9a052ae
+ceTaskUrl=http://localhost:9000/api/ce/task?id=8517f5fb-6745-4301-a4b1-a58fe9a052ae
